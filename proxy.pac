@@ -8,8 +8,8 @@ function FindProxyForURL(url, host) {
         host.indexOf('192.168.') == 0 ||
         host.indexOf('10.') == 0 ||
         shExpMatch(host, 'localhost.*')) {
-        return 'DIRECT';
-    } else if (FindProxyForURLByAdblock(url, host) != defaultproxy ||
+        return defaultproxy;
+    } else if (FindProxyForURLByAdblock(url, host) != 0 ||
                host == 'p.tanx.com' ||
                host == 'a.alimama.cn' ||
                host == 'pagead2.googlesyndication.com' ||
@@ -26,7 +26,12 @@ function FindProxyForURL(url, host) {
                host == 'goo.gl') {
         return autoproxy;
     } else {
-        return FindProxyForURLByAutoProxy(url, host);
+        var autoproxy_ret = FindProxyForURLByAutoProxy(url, host)
+        if (autoproxy_ret != 0) {
+            return autoproxy_ret;
+        } else {
+            return defaultproxy;
+        }
     }
 }
 
@@ -395,9 +400,9 @@ var blackhole_host = {
 function FindProxyForURLByAdblock(url, host) {
     // untrusted ablock plus list, disable whitelist until chinalist come back.
     if (blackhole_host.hasOwnProperty(host)) {
-        return 'PROXY 127.0.0.1:80; DIRECT';
+        return 1;
     }
-    return 'DIRECT';
+    return 0;
 }
 
 var autoproxy_host = {
@@ -3080,10 +3085,10 @@ function FindProxyForURLByAutoProxy(url, host) {
     var lastPos;
     do {
         if (autoproxy_host.hasOwnProperty(host)) {
-            return 'SOCKS 127.0.0.1:8099; DIRECT';
+            return 1;
         }
         lastPos = host.indexOf('.') + 1;
         host = host.slice(lastPos);
     } while (lastPos >= 1);
-    return 'DIRECT';
+    return 0;
 }
