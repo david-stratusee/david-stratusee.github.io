@@ -5,6 +5,7 @@ function FindProxyForURL(url, host) {
     var defaultproxy = 'DIRECT';
     if (isPlainHostName(host) ||
         host.indexOf('127.') == 0 ||
+        host.indexOf('172.16.') == 0 ||
         host.indexOf('192.168.') == 0 ||
         host.indexOf('10.') == 0 ||
         shExpMatch(host, 'localhost.*')) {
