@@ -11,20 +11,13 @@ function FindProxyForURL(url, host) {
         shExpMatch(host, 'localhost.*')) {
         return defaultproxy;
     } else if (FindProxyForURLByAdblock(url, host) != 0 ||
-               host == 'p.tanx.com' ||
-               host == 'a.alimama.cn' ||
-               host == 'pagead2.googlesyndication.com' ||
                dnsDomainIs(host, '.google-analytics.com') ||
                dnsDomainIs(host, '.2mdn.net') ||
                dnsDomainIs(host, '.doubleclick.net')) {
         return blackhole;
     } else if (shExpMatch(host, '*.google*.*') ||
                dnsDomainIs(host, '.ggpht.com') ||
-               dnsDomainIs(host, '.wikipedia.org') ||
-               host == 'cdnjs.cloudflare.com' ||
-               host == 'wp.me' ||
-               host == 'po.st' ||
-               host == 'goo.gl') {
+               dnsDomainIs(host, '.wikipedia.org')) {
         return autoproxy;
     } else {
         var autoproxy_ret = FindProxyForURLByAutoProxy(url, host)
@@ -396,7 +389,10 @@ var blackhole_host = {
     'zo66.com': 1,
     'zt2088.com': 1,
     'zuipark.oss-cn-beijing.aliyuncs.com': 1,
-    'zvweapp.com': 1
+    'zvweapp.com': 1,
+    'p.tanx.com':1,
+    'a.alimama.cn':1,
+    'pagead2.googlesyndication.com':1,
 };
 function FindProxyForURLByAdblock(url, host) {
     // untrusted ablock plus list, disable whitelist until chinalist come back.
@@ -3081,6 +3077,10 @@ var autoproxy_host = {
     "zvereff.com": 1,
     "zyzc9.com": 1,
     "www.5idc.us": 1,
+    'cdnjs.cloudflare.com': 1,
+    'wp.me': 1,
+    'po.st': 1,
+    'goo.gl': 1,
 };
 function FindProxyForURLByAutoProxy(url, host) {
     var lastPos;
