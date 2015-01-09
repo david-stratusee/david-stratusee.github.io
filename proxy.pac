@@ -390,9 +390,9 @@ var blackhole_host = {
     'zt2088.com': 1,
     'zuipark.oss-cn-beijing.aliyuncs.com': 1,
     'zvweapp.com': 1,
-    'p.tanx.com':1,
-    'a.alimama.cn':1,
-    'pagead2.googlesyndication.com':1,
+    'p.tanx.com': 1,
+    'a.alimama.cn': 1,
+    'pagead2.googlesyndication.com': 1,
 };
 function FindProxyForURLByAdblock(url, host) {
     // untrusted ablock plus list, disable whitelist until chinalist come back.
