@@ -3077,10 +3077,10 @@ var autoproxy_host = {
     "zvereff.com": 1,
     "zyzc9.com": 1,
     "www.5idc.us": 1,
-    'cdnjs.cloudflare.com': 1,
-    'wp.me': 1,
-    'po.st': 1,
-    'goo.gl': 1,
+    "cdnjs.cloudflare.com": 1,
+    "wp.me": 1,
+    "po.st": 1,
+    "goo.gl": 1,
 };
 function FindProxyForURLByAutoProxy(url, host) {
     var lastPos;
