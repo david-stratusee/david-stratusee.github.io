@@ -2,7 +2,7 @@
 function FindProxyForURL(url, host) {
     var autoproxy = 'SOCKS 127.0.0.1:8099; DIRECT';
     var blackhole = 'PROXY 127.0.0.1:80; DIRECT';
-    var defaultproxy = 'DIRECT';
+    var defaultproxy = 'DIRECT; SOCKS 127.0.0.1:8099';
     if (isPlainHostName(host) ||
         host.indexOf('127.') == 0 ||
         host.indexOf('172.16.') == 0 ||
