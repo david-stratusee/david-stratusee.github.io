@@ -3088,12 +3088,21 @@ function FindProxyForURLByAutoProxy(url, host) {
     if (shExpMatch(host, '*.google*.*')) {
         return 1;
 
-    do {
-        if (autoproxy_host.hasOwnProperty(host)) {
+    var host_array = host.split('.');
+    var i = 0;
+    var len = host_array.length;
+    var tmp = "";
+    for (i = len - 1; i >= 0; i--) {
+        if (tmp == "") {
+            tmp = host_array[i];
+        } else {
+            tmp = host_array[i] + '.' + tmp;
+        }
+
+        if (autoproxy_host.hasOwnProperty(tmp)) {
             return 1;
         }
-        lastPos = host.indexOf('.') + 1;
-        host = host.slice(lastPos);
-    } while (lastPos >= 1);
+    }
+
     return 0;
 }
