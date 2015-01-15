@@ -3077,6 +3077,7 @@ var autoproxy_host = {
     "wp.me": 1,
     "po.st": 1,
     "goo.gl": 1,
+    "google.com": 1,
 
     // user add
     "www.5idc.us": 1,
