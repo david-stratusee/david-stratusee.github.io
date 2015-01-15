@@ -1688,7 +1688,6 @@ var autoproxy_host = {
     "premeforwindows7.com": 1,
     "presentationzen.com": 1,
     "prestige-av.com": 1,
-    "prisoner-state-secret-journal-premier": 1,
     "privacybox.de": 1,
     "privateinternetaccess.com": 1,
     "privatepaste.com": 1,
@@ -2682,14 +2681,9 @@ function FindProxyForURLByAutoProxy(url, host) {
     var host_array = host.split('.');
     var i = 0;
     var len = host_array.length;
-    var tmp = "";
-    for (i = len - 1; i >= 0; i--) {
-        if (tmp == "") {
-            tmp = host_array[i];
-        } else {
-            tmp = host_array[i] + '.' + tmp;
-        }
-
+    var tmp = host_array[len - 1];
+    for (i = len - 2; i >= 0; i--) {
+        tmp = host_array[i] + '.' + tmp;
         if (autoproxy_host.hasOwnProperty(tmp)) {
             return 1;
         }
