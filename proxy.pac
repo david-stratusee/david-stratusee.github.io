@@ -196,6 +196,7 @@ var autoproxy_host_new = {
     "zlib.net": 1,
     "ziplib.com": 1,
     "tvboxnow.com": 1,
+    "stratusee.com": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
