@@ -197,6 +197,7 @@ var autoproxy_host_new = {
     "ziplib.com": 1,
     "tvboxnow.com": 1,
     "stratusee.com": 1,
+    "curl.haxx.se": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
