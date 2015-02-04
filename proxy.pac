@@ -198,6 +198,7 @@ var autoproxy_host_new = {
     "tvboxnow.com": 1,
     "stratusee.com": 1,
     "curl.haxx.se": 1,
+    "tldp.org": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
