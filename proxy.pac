@@ -107,7 +107,6 @@ var autoproxy_host_new = {
     "proxifier.com": 1,
     "purepdf.com": 1,
     "purevpn.com": 1,
-    "python.com": 1,
     "python.com.tw": 1,
     "qq.co.za": 1,
     "read100.com": 1,
