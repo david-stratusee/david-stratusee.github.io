@@ -195,7 +195,6 @@ var autoproxy_host_new = {
     "zlib.net": 1,
     "ziplib.com": 1,
     "tvboxnow.com": 1,
-    "stratusee.com": 1,
     "curl.haxx.se": 1,
     "tldp.org": 1,
 };

@@ -18,7 +18,7 @@ set -o nounset                              # Treat unset variables as an error
 username=david
 
 available_host_port=("dev-aie.stratusee.com:22" "dev-aie3.stratusee.com:22" "us.stratusee.com:2221")
-host_port=${available_host_port[0]}
+host_port=${available_host_port[2]}
 
 ETH="Wi-Fi"
 #-------------------------------------------------------------------------------
@@ -35,7 +35,7 @@ function show_proxy()
     echo ===========================
     if [ -f /tmp/watch_socks.log ]; then
         echo "/tmp/watch_socks.log:"
-        cat /tmp/watch_socks.log
+        grep "ssh -D" /tmp/watch_socks.log
         echo ===========================
     fi
 }
@@ -45,6 +45,7 @@ function fill_and_run_proxy()
     remote_host=`echo ${host_port} | awk -F":" '{print $1}'`
     remote_port=`echo ${host_port} | awk -F":" '{print $2}'`
 
+    nslookup ${remote_host} >/tmp/watch_socks.log
     ${HOME}/bin/watch_socks.sh ${username} ${remote_host} ${remote_port} >>/tmp/watch_socks.log 2>&1 &
 }
 
