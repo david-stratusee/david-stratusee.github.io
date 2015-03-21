@@ -180,6 +180,7 @@ var autoproxy_host_new = {
     "xbookcn.com": 1,
     "xinhuanet.org": 1,
     "youtu.be": 1,
+    "cool18.com":1,
     "freeyoutubeproxy.net": 1,
     "listentoyoutube.com": 1,
     "youtube-nocookie.com": 1,
