@@ -200,6 +200,7 @@ var autoproxy_host_new = {
     "curl.haxx.se": 1,
     "tldp.org": 1,
     "virustotal.com": 1,
+    "wunderlist.com": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
