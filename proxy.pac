@@ -49,8 +49,6 @@ var autoproxy_host_new = {
     "daylife.com": 1,
     "date.fm": 1,
     "doxygen.org": 1,
-    "dropbox.com": 1,
-    "dropboxusercontent.com": 1,
     "dyndns.org": 1,
     "e-info.org.tw": 1,
     "earthquake.usgs.gov": 1,
@@ -205,7 +203,7 @@ var autoproxy_host_new = {
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
-    if (host.search(/google|facebook/i) >= 0) {
+    if (host.search(/google|facebook|dropbox/i) >= 0) {
         return 1;
     }
 
