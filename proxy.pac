@@ -200,6 +200,7 @@ var autoproxy_host_new = {
     "virustotal.com": 1,
     "virustotalcloud.appspot.com": 1,
     "wunderlist.com": 1,
+    "stratusee.com": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
