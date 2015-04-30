@@ -184,6 +184,7 @@ var autoproxy_host_new = {
     "listentoyoutube.com": 1,
     "youtube-nocookie.com": 1,
     "youtube.com": 1,
+    "ytimg.com": 1,
     "youtubecn.com": 1,
     "youversion.com": 1,
     "zdnet.com.tw": 1,
