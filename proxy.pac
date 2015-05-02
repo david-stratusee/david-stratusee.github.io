@@ -180,6 +180,7 @@ var autoproxy_host_new = {
     "youtu.be": 1,
     "cool18.com":1,
     "6park.com":1,
+    "imgur.com":1,
     "freeyoutubeproxy.net": 1,
     "listentoyoutube.com": 1,
     "youtube-nocookie.com": 1,
