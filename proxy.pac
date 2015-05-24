@@ -205,6 +205,7 @@ var autoproxy_host_new = {
     "stratusee.com": 1,
     "innovid.com": 1,
     "twimg.com": 1,
+    "search.aol.com": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
