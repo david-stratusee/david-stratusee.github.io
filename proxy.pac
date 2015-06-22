@@ -198,6 +198,7 @@ var autoproxy_host_new = {
     "imgur.com": 1,
     "tumblr.com": 1,
     "instagram.com": 1,
+    "stratusee.com": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
