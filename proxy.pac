@@ -200,6 +200,7 @@ var autoproxy_host_new = {
     "instagram.com": 1,
     "stratusee.com": 1,
     "ggpht.com": 1,
+    "apple.com": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
