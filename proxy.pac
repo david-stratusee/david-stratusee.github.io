@@ -202,6 +202,7 @@ var autoproxy_host_new = {
     "ggpht.com": 1,
     "apple.com": 1,
     "dappleworks.com": 1,
+    "ntdtv.com": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
