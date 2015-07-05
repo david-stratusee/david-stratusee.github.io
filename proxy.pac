@@ -201,6 +201,7 @@ var autoproxy_host_new = {
     "stratusee.com": 1,
     "ggpht.com": 1,
     "apple.com": 1,
+    "dappleworks.com": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
