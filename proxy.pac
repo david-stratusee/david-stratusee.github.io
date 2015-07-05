@@ -203,6 +203,7 @@ var autoproxy_host_new = {
     "apple.com": 1,
     "dappleworks.com": 1,
     "ntdtv.com": 1,
+    "blogspot.com": 1,
 };
 
 function FindProxyForURLByAutoProxy(url, host) {
