@@ -202,6 +202,7 @@ var autoproxy_host_new = {
     "dappleworks.com": 1,
     "ntdtv.com": 1,
     "blogspot.com": 1,
+    "chromium.org": 1,
 };
 //"amazon.com": 1,
 //"apple.com": 1,
