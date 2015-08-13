@@ -197,13 +197,13 @@ var autoproxy_host_new = {
     "imgur.com": 1,
     "tumblr.com": 1,
     "instagram.com": 1,
-    "stratusee.com": 1,
     "ggpht.com": 1,
     "dappleworks.com": 1,
     "ntdtv.com": 1,
     "blogspot.com": 1,
     "chromium.org": 1,
 };
+//"stratusee.com": 1,
 //"amazon.com": 1,
 //"apple.com": 1,
 
