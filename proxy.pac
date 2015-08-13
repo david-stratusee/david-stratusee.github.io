@@ -17,7 +17,6 @@ function FindProxyForURL(url, host) {
 
 var autoproxy_host_new = {
     "all-that-is-interesting.com": 1,
-    "amazon.com": 1,
     "android.com": 1,
     "anonymizer.com": 1,
     "aolchannels.aol.com": 1,
@@ -204,6 +203,7 @@ var autoproxy_host_new = {
     "ntdtv.com": 1,
     "blogspot.com": 1,
 };
+//"amazon.com": 1,
 //"apple.com": 1,
 
 function FindProxyForURLByAutoProxy(url, host) {
