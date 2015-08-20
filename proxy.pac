@@ -202,6 +202,7 @@ var autoproxy_host_new = {
     "ntdtv.com": 1,
     "blogspot.com": 1,
     "chromium.org": 1,
+    "reuters.com": 1,
 };
 //"stratusee.com": 1,
 //"amazon.com": 1,
