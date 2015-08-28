@@ -137,7 +137,7 @@ var autoproxy_host_new = {
 //"unicode.org": 1,
 
 function FindProxyForURLByAutoProxy(url, host) {
-    if (host.search(/google|facebook|dropbox|twitter/i) >= 0) {
+    if (host.search(/google|facebook|dropbox|twitter|rubygems/i) >= 0) {
         return 1;
     }
 
