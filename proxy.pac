@@ -132,6 +132,7 @@ var autoproxy_host_new = {
     "reuters.com": 1,
     "reverbnation.com": 1,
     "edgecastcdn.net": 1,
+    "emusic.com": 1,
 };
 //"stratusee.com": 1,
 //"amazon.com": 1,
