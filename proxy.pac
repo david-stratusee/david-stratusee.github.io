@@ -131,6 +131,7 @@ var autoproxy_host_new = {
     "chromium.org": 1,
     "reuters.com": 1,
     "reverbnation.com": 1,
+    "edgecastcdn.net": 1,
 };
 //"stratusee.com": 1,
 //"amazon.com": 1,
