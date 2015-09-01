@@ -134,6 +134,7 @@ var autoproxy_host_new = {
     "edgecastcdn.net": 1,
     "emusic.com": 1,
     "getlantern.org": 1,
+    "amazonaws.com": 1,
 };
 //"stratusee.com": 1,
 //"amazon.com": 1,
