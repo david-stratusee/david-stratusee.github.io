@@ -136,6 +136,7 @@ var autoproxy_host_new = {
     "getlantern.org": 1,
     "amazonaws.com": 1,
     "apr.apache.org": 1,
+    "wenxuecity.com": 1,
 };
 //"stratusee.com": 1,
 //"amazon.com": 1,
