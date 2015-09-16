@@ -2222,6 +2222,7 @@ function FindProxyForURL(url, host) {
 
         // add by david
         'github.com'                   : 1,
+        'apnic.net'                    : 1,
     };
 
     var dangerDomains = {
@@ -2317,6 +2318,31 @@ function FindProxyForURL(url, host) {
         16402 : 1
     };
 
+    var dangerPorts = {
+        80   : 1,
+        8000 : 1,
+        8080 : 1,
+        8081 : 1,
+        8082 : 1,
+        8083 : 1,
+        8084 : 1,
+        8085 : 1,
+        8086 : 1,
+        8087 : 1,
+        8088 : 1,
+        8089 : 1,
+        8090 : 1,
+
+        8443 : 1,
+        443  : 1,
+        465  : 1,
+        995  : 1,
+        993  : 1,
+        25   : 1,
+        110  : 1,
+        143  : 1
+    };
+
     var proxy = 'SOCKS5 127.0.0.1:15500; DIRECT';
 
     function convertAddress(ipchars) {
@@ -2385,12 +2411,17 @@ function FindProxyForURL(url, host) {
         return proxy;
     }
 
-    //if (safePorts[host.split(':')[1]]) {
+    ports_list=host.split(':')
+    //if (ports_list.length > 1 && safePorts[ports_list[1]]) {
     //    return 'DIRECT';
     //}
 
+    if (ports_list.length > 1 && !dangerPorts[ports_list[1]]) {
+        return 'DIRECT';
+    }
+
     var strIp = dnsResolve(host);
-    if (!strIp || fakeIps[strIp]) {
+    if (!strIp/* || fakeIps[strIp]*/) {
         return proxy;
     }
 
