@@ -2227,15 +2227,11 @@ function FindProxyForURL(url, host) {
 
     var dangerDomains = {
      // 'apple.com'     : 1,
-        'google.com'    : 1,
-        'twitter.com'   : 1,
-        'facebook.com'  : 1,
         'yyets.com'     : 1,
         'yahoo.com'     : 1,
         'youtube.com'   : 1,
         'zaobao.com.sg' : 1,
         'box.com'       : 1,
-        'dropbox.com'   : 1,
     };
 
     // see https://github.com/clowwindy/ChinaDNS/blob/master/chinadns/dnsrelay.py
@@ -2398,8 +2394,7 @@ function FindProxyForURL(url, host) {
     // fix error message in FoxyProxy when switching tabs. http://verihy.me/posts/foxyproxy-pac/
     if (typeof host === 'undefined'
      || isPlainHostName(host)
-     || host === '127.0.0.1'
-     || host === 'localhost') {
+     || host.search(/127.|10.|172.16.|192.168.|localhost./i) == 0) {
         return 'DIRECT';
     }
 
@@ -2407,7 +2402,7 @@ function FindProxyForURL(url, host) {
         return 'DIRECT';
     }
 
-    if (testDomain(host, dangerDomains)) {
+    if (host.search(/google|facebook|dropbox|twitter|rubygems/i) >= 0 || testDomain(host, dangerDomains)) {
         return proxy;
     }
 
