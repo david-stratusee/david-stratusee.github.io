@@ -2223,6 +2223,7 @@ function FindProxyForURL(url, host) {
 
         // add by david
         'github.com'                   : 1,
+        'github.io'                    : 1,
         'apnic.net'                    : 1,
     };
 
