@@ -2221,10 +2221,11 @@ function FindProxyForURL(url, host) {
         'zhubajie.com'                 : 1,
         'zongheng.com'                 : 1,
 
-        // add by david
+        // safeDomains add by david
         'github.com'                   : 1,
         'github.io'                    : 1,
         'apnic.net'                    : 1,
+        'www.gutenberg.org'            : 1,
     };
 
     var dangerDomains = {
