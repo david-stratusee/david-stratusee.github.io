@@ -137,6 +137,9 @@ var autoproxy_host_new = {
     "amazonaws.com": 1,
     "apr.apache.org": 1,
     "wenxuecity.com": 1,
+    "python.org": 1,
+    "zaobao.com.sg": 1,
+    "box.com": 1,
 };
 //"stratusee.com": 1,
 //"amazon.com": 1,
