@@ -2235,7 +2235,7 @@ function FindProxyForURL(url, host) {
         'youtube.com'   : 1,
         'zaobao.com.sg' : 1,
         'box.com'       : 1,
-        'python.org'    : 1,
+     // 'python.org'    : 1,
     };
 
     // see https://github.com/clowwindy/ChinaDNS/blob/master/chinadns/dnsrelay.py
