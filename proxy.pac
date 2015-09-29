@@ -2399,11 +2399,12 @@ function FindProxyForURL(url, host) {
         return 'DIRECT';
     }
 
-    if (testDomain(host, safeDomains, true)) {
+    if (host.search(/apple|icloud|mzstatic|itunes/i) >= 0
+            || testDomain(host, safeDomains, true)) {
         return 'DIRECT';
     }
 
-    if (host.search(/google|facebook|dropbox|twitter|rubygems|apple|icloud|mzstatic/i) >= 0
+    if (host.search(/google|facebook|dropbox|twitter|rubygems/i) >= 0
             || testDomain(host, dangerDomains)) {
         return proxy;
     }
