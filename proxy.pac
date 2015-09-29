@@ -1904,11 +1904,6 @@ function FindProxyForURL(url, host) {
         'aliyuncs.com'                 : 1,
         'anzhi.com'                    : 1,
         'appinn.com'                   : 1,
-        'apple.com'                    : 1,
-        'icloud.com'                   : 1,
-        'mzstatic.com'                 : 1,
-        'itunes-apple.com.akadns.net'  : 1,
-        'apple.com.akadns.net'         : 1,
         'appsina.com'                  : 1,
         'archlinuxcn.org'              : 1,
         'atpanel.com'                  : 1,
@@ -2075,7 +2070,6 @@ function FindProxyForURL(url, host) {
         'mtime.com'                    : 1,
         'my-card.in'                   : 1,
         'mydrivers.com'                : 1,
-        'mzstatic.com'                 : 1,
         'netease.com'                  : 1,
         'newsmth.net'                  : 1,
         'ngacn.cc'                     : 1,
@@ -2232,7 +2226,6 @@ function FindProxyForURL(url, host) {
     };
 
     var dangerDomains = {
-     // 'apple.com'     : 1,
         'yyets.com'     : 1,
         'yahoo.com'     : 1,
         'youtube.com'   : 1,
@@ -2410,7 +2403,8 @@ function FindProxyForURL(url, host) {
         return 'DIRECT';
     }
 
-    if (host.search(/google|facebook|dropbox|twitter|rubygems/i) >= 0 || testDomain(host, dangerDomains)) {
+    if (host.search(/google|facebook|dropbox|twitter|rubygems|apple|icloud|mzstatic/i) >= 0
+            || testDomain(host, dangerDomains)) {
         return proxy;
     }
 
