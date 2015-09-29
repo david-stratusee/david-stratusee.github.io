@@ -1907,6 +1907,8 @@ function FindProxyForURL(url, host) {
         'apple.com'                    : 1,
         'icloud.com'                   : 1,
         'mzstatic.com'                 : 1,
+        'itunes-apple.com.akadns.net'  : 1,
+        'apple.com.akadns.net'         : 1,
         'appsina.com'                  : 1,
         'archlinuxcn.org'              : 1,
         'atpanel.com'                  : 1,
