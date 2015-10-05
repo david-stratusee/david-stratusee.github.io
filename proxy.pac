@@ -2222,7 +2222,8 @@ function FindProxyForURL(url, host) {
         'github.com'                   : 1,
         'github.io'                    : 1,
         'apnic.net'                    : 1,
-        'www.gutenberg.org'            : 1,
+        'gutenberg.org'                : 1,
+        'amazon.com'                   : 1,
     };
 
     var dangerDomains = {
